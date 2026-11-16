@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#291b43">
+  <title>Spin The Love Wheel</title>
+  <meta name="description" content="Putar roda cinta dan temukan kejutan kecil untuk orang tersayang.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span>✦</span> LITTLE LOVE STUDIO</a>
+    <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true">♫ Sound on</button>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow"><span class="sparkle">✧</span> A LITTLE GAME FOR TWO <span class="sparkle">✧</span></p>
+      <h1>Spin the<br><em>Love Wheel.</em></h1>
+      <p class="lead">Satu putaran, satu kejutan.</p>
+      <div class="mini-note"><span>♡</span> Made for your favorite person</div>
+      <div class="edit-card">
+        <div class="edit-head"><div><span class="eyebrow">MAKE IT YOURS</span><h2>Wheel options</h2></div><span class="edit-icon">✎</span></div>
+        <p class="edit-help">Tulis hadiah, tantangan, atau pesan yang ingin dimasukkan ke roda.</p>
+        <div class="option-list" id="optionList"></div>
+        <div class="add-row"><input id="newOption" type="text" maxlength="28" placeholder="Add a sweet surprise..."><button id="addOption" type="button" aria-label="Add option">+</button></div>
+        <button class="reset-options" id="resetOptions" type="button">Reset to sample options</button>
+      </div>
+    </section>
+
+    <section class="game-panel">
+      <div class="game-heading"><span class="status-dot"></span> YOUR LITTLE MOMENT <span class="round-label">ROUND 01</span></div>
+      <div class="wheel-stage">
+        <div class="pointer" aria-hidden="true"></div>
+        <div class="wheel-frame">
+          <canvas id="wheelCanvas" width="720" height="720" aria-label="Wheel with random surprises"></canvas>
+          <div class="wheel-center"><span>♥</span><small>SPIN<br>ME</small></div>
+        </div>
+        <div class="orbit orbit-a">✦</div><div class="orbit orbit-b">♡</div><div class="orbit orbit-c">✧</div>
+      </div>
+      <button class="spin-btn" id="spinBtn" type="button"><span>SPIN THE WHEEL</span><b>↗</b></button>
+      <p class="spin-hint" id="spinHint">Take a breath and let fate decide ✨</p>
+      <div class="result-card" id="resultCard" aria-live="polite">
+        <span class="result-label">YOUR LITTLE SURPRISE</span>
+        <div class="result-emoji">🎁</div>
+        <h2 id="resultText">Something sweet is waiting...</h2>
+        <p>Whatever it is, make it a lovely moment.</p>
+        <button id="spinAgain" type="button">Spin again ↻</button>
+      </div>
+      <p class="footer-note">A LITTLE RANDOMNESS, A LOT OF LOVE <span>♥</span></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
